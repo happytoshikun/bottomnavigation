@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    display: flex;
+    font-size: 2rem;
+    min-height: 100vh;
+    height: auto;
+}
+main {
+    width: 550px;
+    min-width: 550px;
+    margin: 0 auto;
+}
+aside {
+    width:  25%;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column; /* 縦に配置する */
+    border-right:2px solid;
+}
+ul {
+    list-style: none; /* リストの前の「・」を消す */
+    padding: 0 10px 0;
+    margin: 0;
+}
+a {
+    display: inline-block;
+    padding: 2px 5px 2px;
+    margin: 5px 0 5px;
+    border: 1px solid;
+    text-decoration : none;
+    color: #000000;
+    font-size: 25px;
+}
+.open,
+.close {
+    padding: 10px;
+}
+div {
+    margin-top: auto; /* 上に空けれらる余白があれば全て余白にする */
+    height: 60px;
+    text-align: center;
+}
+h1 {
+    font-size: 250px;
+    text-align: center;
+    margin: 0;
+}
+h2 {
+    text-align: center;
+    margin: 20px 0 20px;
+}
+p {
+    text-align: center;
+}
+footer {
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    body {
+        min-width: 750px;
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+        flex: 1;
+    }
+    footer {
+        display: block;
+        margin-bottom: 90px;
+        text-align: center;
+    }
+    div,
+    p {
+        display: none;
+    }
+    aside {
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        min-width: 550px;
+        border-right: none;
+    }
+    nav {
+        margin: 0;
+    }
+    ul {
+        display: flex;
+        min-width: 750px;
+        padding: 0;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        height: 75px;
+        margin: 0 -1px 0 -1px;
+        border: 2px solid;
+    }
+    a {
+        font-size: 45%;
+        padding: 7px;
+        margin: 0;
+        border: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    footer {
+        margin-bottom: 100px;
+    }
+}
